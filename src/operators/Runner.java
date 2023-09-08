@@ -2,6 +2,8 @@ package operators;
 
 public class Runner {
 
+
+
     public static void main(String[] args) {
         int i = 12;
 
@@ -60,5 +62,10 @@ public class Runner {
         System.out.println(i);
         // concatenates the strings (adds them together)
         System.out.println("Hello, " + "World!");
+
+
+        boolean b;
+//        cannot access a local variable that hasn't been given a value
+//        System.out.println(b);
     }
 }
