@@ -1,25 +1,21 @@
 package oop;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.Scanner;
-
 public class Runner {
 
     public static void main(String[] args) {
         Person me = new Person(); // creates an object of type Person
         // dot syntax -> access the members of an objects
-        System.out.println(me.introduction());
+        System.out.println(me.toString());
         me.setName("Jordan");
         me.setAge(29);
         me.setJob("Trainer");
         me.setHairColour("Black");
 
-        System.out.println(me.introduction());
+        System.out.println(me.toString());
 
 
         Person cameron =  new Person("Cameron", 30, "Trainer", "Brown");
-        System.out.println(cameron.introduction());
+        System.out.println(cameron.toString());
 
         // bad mojo
         System.out.println(me.getLatinName());
@@ -31,6 +27,8 @@ public class Runner {
         // bad mojo
         System.out.println(me.getLatinName());
         System.out.println(cameron.getLatinName());
+
+        System.out.println(me);
 
     }
 }

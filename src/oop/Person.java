@@ -50,7 +50,7 @@ public class Person {
         this.hairColour = hairColour;
     }
 
-    public String introduction() {
+    public String toString() {
         return "Hello, my name is " + name + " and I am a " + age + " years old " + job + " with " + hairColour + " hair";
     }
 
