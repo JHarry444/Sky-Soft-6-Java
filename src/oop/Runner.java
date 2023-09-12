@@ -1,5 +1,7 @@
 package oop;
 
+import arrays.NumberExercise;
+
 public class Runner {
 
     public static void main(String[] args) {
@@ -30,5 +32,14 @@ public class Runner {
 
         System.out.println(me);
 
+        pbv(me);
+
+        System.out.println(me);
+
+    }
+
+
+    private static void pbv(Person p) {
+        p.setName("Barry");
     }
 }
