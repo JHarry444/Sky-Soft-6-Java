@@ -22,6 +22,10 @@ public class Animal extends Object{
         this.noOfLegs = noOfLegs;
     }
 
+    public void speak() {
+        System.out.println("WAH!");
+    }
+
     public String toString() {
         return "Animal{" +
                 "name='" + name + '\'' +

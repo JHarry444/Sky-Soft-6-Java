@@ -18,6 +18,11 @@ public class Cat extends Mammal {
         this.lives = lives;
     }
 
+    @Override
+    public void speak() {
+        System.out.println("MEOW");
+    }
+
     public void scratch() {
         System.out.println("hiss! AHHHHHHHHHH!");
     }
