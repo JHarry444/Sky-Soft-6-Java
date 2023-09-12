@@ -22,6 +22,24 @@ public class Vet {
         return this.animals.remove(a);
     }
 
+    public boolean removeAnimals(Class clazz) {
+        for (int i = this.animals.size() - 1; i >= 0; i--) {
+            Animal a = this.animals.get(i);
+            if (a.getClass() == clazz) this.animals.remove(a);
+        }
+        return false;
+    }
+
+    public double calcBill() {
+        double bill = 0;
+
+        for (Animal a : this.animals) {
+            bill += a.calcBill();
+        }
+
+        return bill;
+    }
+
     public boolean empty() {
         this.animals.clear();
         return this.animals.size() == 0;

@@ -66,5 +66,20 @@ public class Runner {
 
         System.out.println(new Cat("Fluffy", 10, 8, 12, 4, 9));
 
+        v.addAnimal(new Cat());
+        v.addAnimal(new Cat());
+        v.addAnimal(new Dog());
+        v.addAnimal(new Cat());
+        v.addAnimal(new Dog());
+        v.addAnimal(new Cat());
+        v.addAnimal(new Cat());
+
+//        v.removeAnimals(Cat.class);
+
+        System.out.println(v);
+
+//        new Animal(); cannot instantiate an abstract class
+
+        System.out.println(v.calcBill());
     }
 }

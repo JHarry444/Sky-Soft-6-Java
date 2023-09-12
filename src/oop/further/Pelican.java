@@ -11,6 +11,11 @@ public class Pelican extends Animal {
     }
 
     @Override
+    public double calcBill() {
+        return 10_000;
+    }
+
+    @Override
     public void speak() {
         System.out.println("AHHHHHHHHHHHHHHHHHHHH");
     }

@@ -15,6 +15,21 @@ public class Dog extends Animal {
         System.out.println("WOOF!");
     }
 
+    @Override
+    public double calcBill() {
+        return 15;
+    }
+
+
+    public String toString() {
+        return "Dog{" +
+                "name='" + getName() + '\'' +
+                ", age=" + getAge() +
+                ", height=" + getHeight() +
+                ", weight=" + getWeight() +
+                "noOfLegs=" + getNoOfLegs() +
+                '}';
+    }
 
     public String speak(boolean loud) {
         if (!loud) return "woof";
