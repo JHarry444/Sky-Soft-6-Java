@@ -19,6 +19,18 @@ public class Cat extends Mammal {
     }
 
     @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + getName() + '\'' +
+                ", age=" + getAge() +
+                ", height=" + getHeight() +
+                ", weight=" + getWeight() +
+                ", noOfLegs=" + getNoOfLegs() +
+                ", lives=" + lives +
+                '}';
+    }
+
+    @Override
     public void speak() {
         System.out.println("MEOW");
     }

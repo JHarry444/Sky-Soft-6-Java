@@ -22,8 +22,13 @@ public class Vet {
         return this.animals.remove(a);
     }
 
+    public boolean empty() {
+        this.animals.clear();
+        return this.animals.size() == 0;
+    }
+
     public void poke() {
-        for (Animal a: this.animals) {
+        for (Animal a : this.animals) {
             a.speak();
         }
     }

@@ -20,7 +20,7 @@ public class Runner {
 //        a.wag();
 
 
-        Animal c = new Cat("Tiddles", 6 , 6, 16, 4);
+        Animal c = new Cat("Tiddles", 6, 6, 16, 4);
 
         System.out.println(c);
         c.speak();
@@ -34,5 +34,37 @@ public class Runner {
         System.out.println(v);
 
         v.poke();
+
+        Dog d2 = new Dog();
+        Animal a2 = d2;
+        Animal a3 = new Cat();
+
+        if (a2 instanceof Dog) {
+            ((Dog) a2).wag();
+        } else {
+            System.out.println("A2 is not a dog");
+        }
+        if (a3 instanceof Dog) {
+            ((Dog) a3).wag();
+        } else {
+            System.out.println("A3 is not a dog");
+        }
+
+        System.out.println(a2.getClass());
+        System.out.println(a3.getClass());
+
+        if (a2.getClass().getSimpleName().equals("Dog")) {
+            ((Dog) a2).wag();
+        } else {
+            System.out.println("A2 is not a dog");
+        }
+        if (a3.getClass() == Dog.class) {
+            ((Dog) a3).wag();
+        } else {
+            System.out.println("A3 is not a dog");
+        }
+
+        System.out.println(new Cat("Fluffy", 10, 8, 12, 4, 9));
+
     }
 }

@@ -26,6 +26,7 @@ public class Animal extends Object{
         System.out.println("WAH!");
     }
 
+    @Override
     public String toString() {
         return "Animal{" +
                 "name='" + name + '\'' +
