@@ -22,13 +22,6 @@ public class Game {
         System.out.println("Player: " + player);
         System.out.println("CPU: " + cpu);
 
-        if (player == cpu) return Result.DRAW;
-        else if (
-                (player == RPS.ROCK && cpu == RPS.SCISSORS) ||
-                (player == RPS.PAPER && cpu == RPS.ROCK) ||
-                (player == RPS.SCISSORS && cpu == RPS.PAPER)
-        )
-            return Result.WIN;
-        else return Result.LOSE;
+        return player.beats(cpu);
     }
 }
