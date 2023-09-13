@@ -1,5 +1,7 @@
 package oop.further;
 
+import java.util.Objects;
+
 public abstract class Animal extends Object implements Billable{
 
     private String name;
@@ -23,6 +25,30 @@ public abstract class Animal extends Object implements Billable{
     }
 
     public abstract void speak();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Animal animal = (Animal) o;
+
+        if (age != animal.age) return false;
+        if (Float.compare(animal.height, height) != 0) return false;
+        if (Float.compare(animal.weight, weight) != 0) return false;
+        if (noOfLegs != animal.noOfLegs) return false;
+        return Objects.equals(name, animal.name);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + age;
+        result = 31 * result + (height != +0.0f ? Float.floatToIntBits(height) : 0);
+        result = 31 * result + (weight != +0.0f ? Float.floatToIntBits(weight) : 0);
+        result = 31 * result + noOfLegs;
+        return result;
+    }
 
     @Override
     public String toString() {
