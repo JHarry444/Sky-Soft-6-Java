@@ -4,10 +4,7 @@ import oop.further.Animal;
 import oop.further.Cat;
 import oop.further.Dog;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Runner {
 
