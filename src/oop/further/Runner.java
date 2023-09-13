@@ -97,5 +97,9 @@ public class Runner {
         for (Billable billable : billables) {
             System.out.println(billable.calcBill());
         }
+
+        Billable newB = () -> 27 * 33;
+
+        newB.calcBill();
     }
 }
