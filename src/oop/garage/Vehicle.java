@@ -1,6 +1,8 @@
 package oop.garage;
 
-public abstract class Vehicle {
+import oop.further.Billable;
+
+public abstract class Vehicle implements Billable, Cloneable {
 
     private final int id;
 
@@ -17,7 +19,6 @@ public abstract class Vehicle {
         this(0);
     }
 
-    public abstract double calcBill();
     public int getId() {
         return id;
     }

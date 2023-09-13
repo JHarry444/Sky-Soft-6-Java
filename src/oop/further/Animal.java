@@ -1,6 +1,6 @@
 package oop.further;
 
-public abstract class Animal extends Object{
+public abstract class Animal extends Object implements Billable{
 
     private String name;
     private int age;
@@ -23,8 +23,6 @@ public abstract class Animal extends Object{
     }
 
     public abstract void speak();
-
-    public abstract double calcBill();
 
     @Override
     public String toString() {

@@ -46,4 +46,12 @@ public class Garage {
         this.vehicles.clear();
         return this.vehicles.size() == 0;
     }
+
+    public double calcBill() {
+        double bill = 0;
+
+        for (Vehicle v : this.vehicles) bill += v.calcBill();
+
+        return bill;
+    }
 }

@@ -1,5 +1,10 @@
 package oop.further;
 
+import oop.garage.Car;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Runner {
 
     public static void main(String[] args) {
@@ -81,5 +86,16 @@ public class Runner {
 //        new Animal(); cannot instantiate an abstract class
 
         System.out.println(v.calcBill());
+
+        Billable b = new Car();
+        b.calcBill();
+
+        List<Billable> billables = new ArrayList<>();
+        billables.add(new Car());
+        billables.add(new Cat());
+
+        for (Billable billable : billables) {
+            System.out.println(billable.calcBill());
+        }
     }
 }
