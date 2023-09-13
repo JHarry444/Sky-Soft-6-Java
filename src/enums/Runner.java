@@ -13,5 +13,10 @@ public class Runner {
 
         for (int i = 0; i < 10; i++) game.flipCoin(CoinFlip.HEADS);
 
+        for (int i = 0; i < 10; i++) System.out.println("Result: " + game.rps(RPS.ROCK));
+        for (int i = 0; i < 10; i++) System.out.println("Result: " + game.rps(RPS.PAPER));
+        for (int i = 0; i < 10; i++) System.out.println("Result: " + game.rps(RPS.SCISSORS));
+
+
     }
 }
