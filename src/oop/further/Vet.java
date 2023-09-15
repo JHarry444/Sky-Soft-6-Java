@@ -1,5 +1,7 @@
 package oop.further;
 
+import exceptions.AnimalNotFoundException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +15,13 @@ public class Vet {
 //    public boolean addDog(Dog d) {
 //        return this.animals.add(d);
 //    }
+
+    public Animal findByName(String name) {
+        for (Animal a : this.animals) {
+            if (a.getName().equals(name)) return a;
+        }
+        throw new AnimalNotFoundException("No animal found with name: " + name);
+    }
 
     public boolean addAnimal(Animal a) {
         return this.animals.add(a);
